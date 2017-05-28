@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# resources
+/src/assets/*.mp4
+
 # dependencies
 /node_modules
 
