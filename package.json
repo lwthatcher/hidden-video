@@ -23,6 +23,7 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "video.js": "^5.19.2",
+    "videojs-stop-button": "0.0.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

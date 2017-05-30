@@ -20,9 +20,11 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/video.js/dist/video-js.css"
+        "../node_modules/video.js/dist/video-js.css",
+        "../node_modules/videojs-stop-button/dist/videojs-stop-button.css"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
