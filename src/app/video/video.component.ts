@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import videojs from 'video.js/dist/video.js';
-import {stopButton, StopButtonToggle}  from 'videojs-stop-button/src/plugin.js';
+// import {stopButton, StopButtonToggle}  from 'videojs-stop-button/src/plugin.js';
 
 @Component({
   selector: 'app-video',
@@ -10,8 +10,8 @@ import {stopButton, StopButtonToggle}  from 'videojs-stop-button/src/plugin.js';
 export class VideoComponent implements OnInit {
 
   constructor() { 
-    videojs.registerComponent('StopButton', StopButtonToggle);
-    videojs.plugin('stopButton', stopButton);
+    // videojs.registerComponent('StopButton', StopButtonToggle);
+    // videojs.plugin('stopButton', stopButton);
   }
 
   ngOnInit() {
@@ -20,13 +20,13 @@ export class VideoComponent implements OnInit {
     };
     var player = videojs('my-player', options, function onPlayerReady() {
       
-      videojs.log('video player loaded', this, stopButton);
+      videojs.log('video player loaded', this);
 
       // How about an event listener?
       this.on('ended', function() {
         videojs.log('reached end of video');
       });
     });
-    player.stopButton();
+    // player.stopButton();
   }
 }
