@@ -1,14 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Let's experiment with your project: {{ title }}!
-  </h1>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm">
+          <h1>Proof-of-Concept project: {{ title }}!</h1>
+      </div>
+  </div>
+  <div class="row h-50">
+    <div class="col-lg">
+        <app-video></app-video>
+    </div>
+    <div class="col-lg">
+      One of three columns
+    </div>
+    <div class="col-lg">
+      One of three columns
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-sm"><button class="btn btn-primary">Test Button</button></div>
+  </div>
 </div>
-<div>
-  <vg-player>
-    <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
-        <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
-    </video>
-  </vg-player>
-</div>
-<button class="btn btn-primary">Test Button</button>

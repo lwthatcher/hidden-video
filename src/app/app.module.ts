@@ -7,11 +7,13 @@ import {VgBufferingModule} from 'videogular2/buffering';
 
 
 import { AppComponent } from './app.component';
+import { VideoComponent } from './video/video.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
