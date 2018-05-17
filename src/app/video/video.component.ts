@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 import {VgAPI} from 'videogular2/core';
 
 type RenderingContext = CanvasRenderingContext2D;
@@ -15,13 +15,16 @@ export class VideoComponent implements OnInit {
   video: HTMLVideoElement;
   context: RenderingContext;
 
+  @Input() name: string;
+  @Input() visibility?: string = 'visible';
+
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
     this.canvas = this.el.nativeElement.querySelector('div.row > div.col-lg > canvas');
     this.video = this.el.nativeElement.querySelector('vg-player > video');
     this.context = this.canvas.getContext('2d');
-    console.log('video component init!', this);
+    console.log('video component init:', this.name, this);
   }
 
   onPlayerReady(api:VgAPI) {
