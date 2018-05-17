@@ -44,7 +44,13 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg">
-    <button class="btn btn-warning" (click)="transfer($event)">Transfer</button>
+  <div class="col-sm">
+    <button class="btn btn-primary" (click)="transfer($event)">Transfer</button>
   </div>
+  <div class="col-sm">
+      <div class="btn-group" role="group" aria-label="external video controls">
+        <button class="btn btn-secondary" (click)="play($event)">Play</button>
+        <button class="btn btn-secondary" (click)="pause($event)">Pause</button>
+      </div>
+    </div>
 </div>

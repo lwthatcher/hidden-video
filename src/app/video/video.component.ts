@@ -37,10 +37,21 @@ export class VideoComponent implements OnInit {
     this.canvas.height = h;
   }
 
-
+  // #region [Event Handlers]
   transfer(event) {
     console.log('transferring image', this.video, this.canvas);
     this.context.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
   }
+
+  play(event) {
+    console.info('play', this.api.state);
+    this.api.play();
+  }
+
+  pause(event) {
+    console.info('play', this.api.state);
+    this.api.pause();
+  }
+  // #endregion
 
 }
